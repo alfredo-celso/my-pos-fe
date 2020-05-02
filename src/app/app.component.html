@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="ui inverted top fixed menu">
+  <div class="ui container">
+    <a routerLink="/" class="header item">
+      <img class="ui mini image" src="/assets/angular.svg">
+      &nbsp;
+      Data viz - platform
+    </a>
+    <a class="item" *ngIf="!isAuthenticated" (click)="login()">Login</a>
+    <a id="messages-button" class="item" *ngIf="isAuthenticated" routerLink="/messages">Notifications</a>
+    <a id="profile-button" class="item" *ngIf="isAuthenticated" routerLink="/profile">{{ userName }} Profile</a>
+    <a id="upload-data-button" class="item" *ngIf="isAuthenticated" routerLink="/upload-data">Upload data</a>
+    <a id="profile-button" class="item" *ngIf="isAuthenticated" routerLink="/dashboard">Dashboard</a>
+    <a id="logout-button" class="item" *ngIf="isAuthenticated" (click)="logout()">Logout</a>
+
+  </div>    
+</div>
+
+<div class="ui text container" style="margin-top: 7em;">
+  <router-outlet> </router-outlet>
+</div>
+
+<p></p>
+<!-- 
+<div class="ui container">
+  Visualizacion de datos
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" target="_blank" href="https://public.tableau.com/profile/alfredo.celso#!/vizhome/Salvadoransaroundtheworld/Sheet1">Salvadorenos por el mundo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/voto-diputado">Diputados</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/voto-alcalde">Alcaldes</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+</div>
+-->
+
+

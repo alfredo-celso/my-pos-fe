@@ -1,0 +1,34 @@
+<h1 class="ui header">Data viz platform - Prototype</h1>
+<div *ngIf="!isAuthenticated">
+  <p>This web app is a prototype for showing data viz from kiosk sales.</p>
+  <p>How this work?
+  <p>Do click on Login menu option, this will addressed to Okta.org to whether authenticate or enroll into the platform,
+    once is done, the web app will show the menu options available.
+    </p>
+  <button id="login-button" class="ui primary button" role="button" (click)="login()">Login</button>
+</div>
+
+<div *ngIf="isAuthenticated && userName">
+  <p>Welcome: {{ userName }}!</p>
+  <p>
+    The login process has been complete accordingly.
+    It is recomendable to visit the page <a href="/profile">Profile</a> to validate your basic info.
+  </p>
+  <h3>Next steps</h3>
+  <p>
+      To vizualize properly your data is required to: </p>
+      <ul>
+      <li>- Upload the JSON file.</li>
+      <li>- Register your monthly payment.</li>
+      <li>- Verify if the data is correct.</li>
+    </ul>
+  <p>
+    The process to validate the payment will take 24 hours after notification.
+    Do not hesitate to request support for any app issue, bug or glith to...
+  </p>
+  This app is using modern technology for web development:
+  <ul>
+    <li *ngFor="let example of resourceServerExamples"><a href="{{example.url}}">{{example.label}}</a></li>
+  </ul>
+  <p>Sooner, a Excel version will be available to download for visualize your data locally.</p>
+</div>

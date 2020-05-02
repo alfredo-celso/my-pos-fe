@@ -1,0 +1,6 @@
+<span style="color:red;" *ngIf="message">{{message}} <br></span>
+<input #file type="file" accept='.csv' (change)="preview(file.files)" />
+<div *ngIf="fileURL">
+    Content: <b></b>
+    {{fileURL}}
+</div>

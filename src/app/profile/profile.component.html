@@ -1,0 +1,25 @@
+<h1 class="ui header">
+  <i aria-hidden="true" class="drivers license outline icon"></i> This is my basic profile ID
+</h1>
+<p>
+  Below you will be able to see your ID and Token linked to your profile with 
+  <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE flow security</a>
+  
+</p>
+<p>
+  This info is protected by <code>OktaAuthGuard</code> component, without authentication is not possible to access to the web app.
+</p>
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let claim of claims">
+      <td>{{claim.claim}}</td>
+      <td id="claim-{{claim.claim}}">{{claim.value}}</td>
+    </tr>
+  </tbody>
+</table>

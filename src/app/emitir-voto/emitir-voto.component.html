@@ -1,0 +1,125 @@
+<div *ngIf="b_estaIniciado && !b_haVotado && !b_puedeVotar">
+<form>
+    <button type="submit" class="btn btn-primary">Generar SMS</button>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Ingrese codigo SMS recibido</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="######">
+      <button class="btn btn-primary" (click)="confirmar()" > Confirmar SMS </button>
+    </div>
+  
+</form>  
+</div>
+  
+<div *ngIf="!b_estaIniciado && !b_estaFinalizado">
+    <div class="form-group">
+        <label style="color:red;" > Proceso de votacion aun no ha sido iniciado! </label>
+    </div>
+</div>
+
+<div *ngIf="b_estaIniciado && b_estaFinalizado">
+    <div class="form-group">
+        <label style="color:green;" > Proceso de votacion esta finalizado! </label>
+    </div>
+</div>
+
+<div *ngIf="b_estaIniciado && b_haVotado">
+    <div class="form-group">
+        <label style="color:blue;" > Informacion! Ud. ha terminado el proceso de votacion.</label>
+    </div>
+</div>
+
+<div *ngIf="b_puedeVotar">
+    <div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Elegir DIPUTADOS por SAN SALVADOR
+            </button>
+        </h2>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+            
+            <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/10678-illustration-of-a-female-user-icon-pv.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Diputado X</h5>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Elegir</label>
+                </div>
+            </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/user-png-icon-10.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Diputado Y</h5>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Elegir</label>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Elegir ALCALDE para SAN SALVADOR
+            </button>
+        </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/580b57fcd9996e24bc43c53e.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Partido A</h5>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Elegir</label>
+                </div>
+            </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/ig-logo-email.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Partido B</h5>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Elegir</label>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Elegir PRESIDENTE
+            </button>
+        </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+            NO DISPONIBLE
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" (click)="votar()" > Votar </button>
+    </div>
+
+
+</div>
+    

@@ -1,0 +1,36 @@
+<h1 class="ui header">
+  <i aria-hidden="true" class="mail outline icon"></i> Mis Mensajes
+</h1>
+<div *ngIf="failed" class="ui error message">
+  <div class="content">
+    <div class="header">Error al obtener los mensajes. Verifique lo siguiente:</div>
+    <ul class="list">
+      <li class="content">El servidor de datos probablemente no esta en proceso de ejecucion.</li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="messages.length">
+  <p>Los mensajes para su perfil son los siguientes:
+    <code>localhost:8000/api/messages</code>
+  </p>
+  <p>Su ID Token obtiene la siguiente informacion:
+    <code>Authorizacionn</code> Si hay error en su ID Token o no es valido vera un error tipo 401.
+    <code>Respuesta sin autorizacion</code>.</p>
+  <p>Los mensajes estan protegidos
+    <code>OktaAuthGuard</code> componente, nos aseguramos que sus mensajes no estan disponibles sin autorizacion por parte de usted.</p>
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages" id="message-{{message.index}}">
+        <td>{{message.date}}</td>
+        <td>{{message.text}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
