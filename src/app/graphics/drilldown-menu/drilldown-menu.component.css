@@ -1,6 +1,6 @@
-._inline { 
+._drilldown { 
     display: inline-block; 
-    border: 2px solid purple; 
+    border: 2px solid green; 
     padding:2px;
     margin:10px;
 }

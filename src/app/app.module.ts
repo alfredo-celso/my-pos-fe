@@ -31,6 +31,14 @@ import { UploadDataComponent } from './upload-data/upload-data.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { GoogleChartsModule, GoogleChartComponent } from 'angular-google-charts';
+import { SalesByGenderComponent } from './graphics/sales-by-gender/sales-by-gender.component';
+import { SalesByProductComponent } from './graphics/sales-by-product/sales-by-product.component';
+import { ProductByHoraQtyComponent } from './graphics/product-by-hora-qty/product-by-hora-qty.component';
+import { ProductByHoraSalesComponent } from './graphics/product-by-hora-sales/product-by-hora-sales.component';
+import { ProfitComponent } from './graphics/profit/profit.component';
+import { AvgDeliveryTimeComponent } from './graphics/avg-delivery-time/avg-delivery-time.component';
+import { DeliveryTimeRegressionComponent } from './graphics/delivery-time-regression/delivery-time-regression.component';
+import { DrilldownMenuComponent } from './graphics/drilldown-menu/drilldown-menu.component';
 
 const appRoutes: Routes = [
   {
@@ -75,6 +83,14 @@ const appRoutes: Routes = [
     UploadDataComponent,
     DashboardComponent,
     UploadFileComponent,
+    SalesByGenderComponent,
+    SalesByProductComponent,
+    ProductByHoraQtyComponent,
+    ProductByHoraSalesComponent,
+    ProfitComponent,
+    AvgDeliveryTimeComponent,
+    DeliveryTimeRegressionComponent,
+    DrilldownMenuComponent,
   ],
   imports: [
     BrowserModule,

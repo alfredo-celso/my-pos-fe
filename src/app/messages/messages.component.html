@@ -1,29 +1,29 @@
 <h1 class="ui header">
-  <i aria-hidden="true" class="mail outline icon"></i> Mis Mensajes
+  <i aria-hidden="true" class="mail outline icon"></i> My Notifications
 </h1>
 <div *ngIf="failed" class="ui error message">
   <div class="content">
-    <div class="header">Error al obtener los mensajes. Verifique lo siguiente:</div>
+    <div class="header">Error to gather notifications. Please check the following:</div>
     <ul class="list">
-      <li class="content">El servidor de datos probablemente no esta en proceso de ejecucion.</li>
+      <li class="content">The data server is not working properly..</li>
     </ul>
   </div>
 </div>
 
 <div *ngIf="messages.length">
-  <p>Los mensajes para su perfil son los siguientes:
+  <p>Please find the notification list below:
     <code>localhost:8000/api/messages</code>
   </p>
-  <p>Su ID Token obtiene la siguiente informacion:
-    <code>Authorizacionn</code> Si hay error en su ID Token o no es valido vera un error tipo 401.
-    <code>Respuesta sin autorizacion</code>.</p>
-  <p>Los mensajes estan protegidos
-    <code>OktaAuthGuard</code> componente, nos aseguramos que sus mensajes no estan disponibles sin autorizacion por parte de usted.</p>
+  <p>Your ID Token hold the info below:
+    <code>Authorization</code> If there is an error, your ID Token is not valid: error 401.
+    <code>Without authorization</code>.</p>
+  <p>The notifications are protected
+    <code>OktaAuthGuard</code> component, without your authorization, if not possible to read your notifications.</p>
   <table class="ui table">
     <thead>
       <tr>
         <th>Date</th>
-        <th>Message</th>
+        <th>Notification</th>
       </tr>
     </thead>
     <tbody>

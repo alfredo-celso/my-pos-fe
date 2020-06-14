@@ -1,12 +1,49 @@
+<app-drilldown-menu> </app-drilldown-menu>
+
 <div>
-  Sales
-  <google-chart #chart
-  [title]="title"
-  [type]="type"
-  [data]="data"
-  [columnNames]="columnNames"
-  [options]="options"
-  [width]="width"
-  [height]="height">
-</google-chart>
+  <div class="_inline">
+    <div>
+      <app-profit> </app-profit>
+    </div>
+  </div>
 </div>
+
+<div>
+  <div class="_inline">
+    <div>
+      <app-sales-by-gender> </app-sales-by-gender>
+    </div>
+  </div>
+  <div class="_inline">
+    <div>
+      <app-sales-by-product> </app-sales-by-product>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="_inline">
+    <div>
+      <app-product-by-hora-sales></app-product-by-hora-sales>
+    </div>
+  </div>
+  <div class="_inline">
+    <div>
+      <app-product-by-hora-qty> </app-product-by-hora-qty>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="_inline">
+    <div>
+      <app-delivery-time-regression> </app-delivery-time-regression>
+    </div>
+  </div>
+  <div class="_inline">
+    <div>
+      <app-avg-delivery-time> </app-avg-delivery-time>
+    </div>
+  </div>
+</div>
+
